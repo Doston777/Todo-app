@@ -39,7 +39,7 @@ export default {
           title,
           completed
         })
-        .then(res => (this.todos = [...this.todos, {...res.data, id: this.todos.length++}]))
+        .then(res => (this.todos = [...this.todos, {...res.data, id: this.todos[this.todos.length - 1].id+1}]))
         .catch(err => console.log(err));
     }
   },
